@@ -1,0 +1,155 @@
+//
+// Bootstrap variables overrides
+
+$border-radius: .75rem;
+$border-radius-sm: .5rem;
+$border-radius-lg: 1rem;
+$body-bg: #F1F2F5;
+$info: #fff;
+$input-btn-padding-y: .5rem;
+// $input-btn-padding-x: 1.5rem;
+$card-spacer-y: 2.5rem;
+$card-spacer-x: 2.5rem;
+$headings-font-weight: 900;
+$h1-font-size: 2.25rem;
+
+$badge-padding-y:                   .35em;
+$badge-padding-x:                   .4em;
+$badge-border-radius:               .25rem;
+
+
+// Colors
+$primary:       #02ADFF;
+$secondary:     #fff;
+$success:       #02ADFF;
+$info:          #CCEFFF;
+$light:         #ffffff;
+
+//
+// Actually including Bootstrap & Bootstrap Vue (respecting overrides).
+
+@import 'bootstrap/scss/bootstrap.scss';
+@import 'bootstrap-vue/src/index.scss';
+
+
+//
+// Other global styles & overrides
+
+// Full-height layout
+html { height: 100%; }
+html, body, #__nuxt, #__layout {
+  height: 100%;
+  display: flex;
+  flex: 1;
+}
+
+// Remove blue outline when button being clicked
+.btn:focus,.btn:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.fh-100 {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.w-auto {
+  flex: unset !important;
+  width: auto !important;
+}
+
+.card-body-sm {
+  padding: .75rem;
+}
+
+.in-tag {
+  margin: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 5px;
+}
+
+.in-pending {
+  background-color: orange;
+  color: lightyellow;
+}
+
+.in-accepted {
+  background-color: green;
+  color: lightgreen;
+}
+
+.in-rejected {
+  background-color: red;
+  color: lightred;
+}
+
+.card.sm {
+  .card-body {
+    padding: $card-spacer-x/2;
+  }
+}
+
+.card.flat {
+  border: none;
+}
+
+.xsmall {
+  font-size: $small-font-size * 0.85;
+}
+
+
+//
+// Tabs
+.nav-tabs {
+  .nav-link {
+    color: #BCB2C1;
+    border-color: transparent;
+
+    &.active {
+      color: #220033;
+      background-color: white;
+      border-bottom-width: 2px;
+      border-bottom-color: #02ADFF;
+      border-top-width: 0px;
+      border-left-width: 0px;
+      border-right-width: 0px;
+    }
+
+    &:hover {
+      color: #BCB2C1;
+      border-color: transparent;
+    }
+    &.active:hover {
+      color: #220033;
+      background-color: white;
+      border-bottom-width: 2px;
+      border-bottom-color: #02ADFF;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-right-color: transparent;
+    }
+  }
+}
+
+.badge-info {
+  color: #02ADFF;
+}
+
+.btn-primary {
+  box-shadow: 0px 2px 8px rgba(0, 95, 238, 0.15);
+}
+
+.btn-light {
+  box-shadow: 0px 2px 8px rgba(0, 95, 238, 0.15);
+  border-width: 1px;
+  border-color: #D8D6DA;
+}
