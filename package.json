@@ -7,7 +7,7 @@
     "@nuxtjs/auth": "^4.9.1",
     "@nuxtjs/axios": "^5.6.0",
     "accounting": "^0.4.1",
-    "bootstrap-vue": "^2.0.0-rc.28",
+    "bootstrap-vue": "^2.14.0",
     "lodash.get": "^4.4.2",
     "lodash.isempty": "^4.4.0",
     "lodash.set": "^4.3.2",

@@ -20,18 +20,14 @@
     />
 
     <keep-alive>
-      <component ref="step" :is="steps[atStep].component" :form="form" />
+      <component ref="step" :is="steps[atStep].component" :form="form" :defaults="steps[atStep].defaults" />
     </keep-alive>
 
     <b-row>
       <b-col>
 
         <!-- TODO -->
-        <router-link
-          v-if="atStep === 0"
-          to="/"
-          class="btn btn-light"
-        >Cancel</router-link>
+        <a href="javascript:history.go(-1)" v-if="atStep === 0" class="btn btn-light">Cancel</a>
 
         <b-button
           type="button"
