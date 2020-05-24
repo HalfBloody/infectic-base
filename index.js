@@ -7,6 +7,7 @@ export default async function (options) {
     this.addPlugin(resolve(__dirname, 'plugins/notifications.js'))
     this.addPlugin(resolve(__dirname, 'plugins/nuxt-client-init.js'))
     this.addPlugin(resolve(__dirname, 'plugins/numeric.js'))
+    this.addPlugin(resolve(__dirname, 'plugins/string.js'))
 
     console.log(this.options.axios);
 
