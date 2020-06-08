@@ -10,8 +10,8 @@ $input-btn-padding-y: .5rem;
 // $input-btn-padding-x: 1.5rem;
 $card-spacer-y: 2.5rem;
 $card-spacer-x: 2.5rem;
-$headings-font-weight: 900;
-$h1-font-size: 2.25rem;
+$headings-font-weight: 400;
+$h1-font-size: 2.0rem;
 
 $badge-padding-y:                   .35em;
 $badge-padding-x:                   .4em;
@@ -24,6 +24,11 @@ $secondary:     #fff;
 $success:       #02ADFF;
 $info:          #CCEFFF;
 $light:         #ffffff;
+$positive:      #5fa814;
+$negative:      #C82333;
+
+// Fonts
+$enable-responsive-font-sizes: true;
 
 //
 // Actually including Bootstrap & Bootstrap Vue (respecting overrides).
@@ -42,6 +47,8 @@ html, body, #__nuxt, #__layout {
   display: flex;
   flex: 1;
 }
+
+// buttons
 
 // Remove blue outline when button being clicked
 .btn:focus,.btn:active {
@@ -151,4 +158,11 @@ html, body, #__nuxt, #__layout {
   box-shadow: 0px 2px 8px rgba(0, 95, 238, 0.15);
   border-width: 1px;
   border-color: #D8D6DA;
+}
+
+.positive {
+  color: $positive;
+}
+.negative {
+  color: $negative;
 }

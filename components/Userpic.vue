@@ -1,14 +1,14 @@
 <template>
   <div class="avatar rounded-circle" :style="circleStyle">
-    <span class="initials" :style="initialsStyle">{{ initials }}</span>
+    <span class="initials" :style="initialsStyle">{{ userInitials }}</span>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    "initials": {
-      default: '?'
+    "userObject": {
+      type: Object
     },
     "circleSize": {
       default: "2.5rem"
@@ -17,13 +17,24 @@ export default {
       default: "1rem"
     }
   },
+  data () {
+    return { }
+  },
   computed: {
     circleStyle () {
       return "width: " + this.circleSize + "; height: " + this.circleSize + ";"
     },
     initialsStyle () {
       return "font-size: " + this.initialsSize
-    }
+    },
+    userInitials () {
+      if (this.$get(this.userObject, 'first_name') && this.$get(this.userObject, 'last_name')) {
+        return this.userObject.first_name[0] + this.userObject.last_name[0]
+      } else {
+        return 'XY'
+      }
+
+    },
   }
 }
 </script>
